@@ -34,20 +34,61 @@
 </head>
 
 <body>
-
+  <script>
+    $(document).ready(function () {
+      $('.close').on('click', function () {
+        $('.modal').modal('hide');
+      });
+    });
+    function redirectButtonLink(string) {
+      $('.modal').modal('hide');
+      $(string).modal('show');
+    }
+  </script>
   <!-- ======= Header ======= -->
   <header id="header" class="fixed-top">
     <div class="container d-flex align-items-center justify-content-between">
 
-      <h1 class="logo"><a href="index.html">Fauthoux</a></h1>
+      <h1 class="logo"><a href="index.html">Yanis FAUTHOUX</a></h1>
       <!-- Uncomment below if you prefer to use an image logo -->
       <!-- <a href="index.html" class="logo"><img src="assets/img/logo.png" alt="" class="img-fluid"></a>-->
 
       <nav id="navbar" class="navbar">
         <ul>
           <li><a class="nav-link scrollto active" href="#hero">Accueil</a></li>
-          <li><a class="nav-link scrollto" href="#about">À propos</a></li>
-          <li><a class="nav-link scrollto " href="#work">Projets</a></li>
+          <li><a class="nav-link scrollto" href="#about">Présentation</a></li>
+          <li class="dropdown"><a href="#work"><span>Réalisations</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li><a href="#work" data-toggle="modal" data-target="#workmodal1">ARGOS</a></li>
+              <li><a href="#work" data-toggle="modal" data-target="#workmodal2">OgChecker</a></li>
+              <li><a href="#work" data-toggle="modal" data-target="#workmodal3">YoutubeBeatUploader</a></li>
+              <li><a href="#work" data-toggle="modal" data-target="#workmodal4">Mat'moi ça</a></li>
+              <li><a href="#work" data-toggle="modal" data-target="#workmodal5">Hypotech</a></li>
+            </ul>
+          </li>
+          <li class="dropdown"><a href="#skills"><span>Compétences</span> <i class="bi bi-chevron-down"></i></a>
+            <ul>
+              <li class="dropdown"><a href="#skillctg1"><span>Technique</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#skillctg1" data-toggle="modal" data-target="#skillctg1modal1">C#</a></li>
+                  <li><a href="#skillctg1" data-toggle="modal" data-target="#skillctg1modal2">Méthode agile</a></li>
+                  <li><a href="#skillctg1" data-toggle="modal" data-target="#skillctg1modal3">Java</a></li>
+                  <li><a href="#skillctg1" data-toggle="modal" data-target="#skillctg1modal4">Angular</a></li>
+                  <li><a href="#skillctg1" data-toggle="modal" data-target="#skillctg1modal5">API</a></li>
+                  <li><a href="#skillctg1" data-toggle="modal" data-target="#skillctg1modal6">SQL</a></li>
+                </ul>
+              </li>
+              <li class="dropdown"><a href="#skillctg2"><span>Humaine</span> <i class="bi bi-chevron-right"></i></a>
+                <ul>
+                  <li><a href="#skillctg2" data-toggle="modal" data-target="#skillctg2modal1">Evénementielle</a></li>
+                  <li><a href="#skillctg2" data-toggle="modal" data-target="#skillctg2modal2">Gestion de projet</a></li>
+                  <li><a href="#skillctg2" data-toggle="modal" data-target="#skillctg2modal3">Communication</a></li>
+                  <li><a href="#skillctg2" data-toggle="modal" data-target="#skillctg2modal4">Gestion de budget</a></li>
+                </ul>
+              </li>
+            </ul>
+          </li>
+          <li><a class="nav-link scrollto" href="#parcours">Mon parcours</a></li>
         </ul>
         <i class="bi bi-list mobile-nav-toggle"></i>
       </nav><!-- .navbar -->
@@ -56,13 +97,13 @@
   </header><!-- End Header -->
 
   <!-- Modal -->
-  <div class="modal fade" id="myModal1" role="dialog" style="opacity: 1;">
+  <div class="modal fade" id="workmodal1" role="dialog" style="opacity: 1;">
     <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
 
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" style="font-size: 18px;">Devmato</h4>
+          <h4 class="modal-title" style="font-size: 18px;">ARGOS</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -79,15 +120,15 @@
                       <div class="swiper-wrapper align-items-center">
 
                         <div class="swiper-slide">
-                          <img src="assets/img/devmato1.png" alt="">
+                          <img src="assets/img/.png" alt="">
                         </div>
 
                         <div class="swiper-slide">
-                          <img src="assets/img/devmato2.png" alt="">
+                          <img src="assets/img/.png" alt="">
                         </div>
 
                         <div class="swiper-slide">
-                          <img src="assets/img/devmato3.png" alt="">
+                          <img src="assets/img/.png" alt="">
                         </div>
 
                       </div>
@@ -96,17 +137,108 @@
                   </div>
 
                   <div class="col-lg-4">
-                    <div class="portfolio-info">
-                      <h3>Informations</h3>
-                      <ul>
-                        <li><strong>Catégorie</strong>: Site web Angular</li>
-                        <li><strong>Technologies utilisées</strong>: AngularJS/JEE/MySQL/API Calendly/API Zoom</li>
-                        <li><strong>Client</strong>: Victoria Arandia</li>
-                        <li><strong>Date</strong>: mars 2021 – juil. 2021</li>
-                      </ul>
-                    </div>
                     <div class="portfolio-description">
-                      <h2>Description</h2>
+                      <h2>Présentation</h2>
+                      <p>
+                        Projet en partenariat avec la société Victoria Arandia, visant à mettre en place une plateforme
+                        utilisant la technologie 𝗔𝗻𝗴𝘂𝗹𝗮𝗿𝗝𝗦 et 𝗝𝗘𝗘 autour d'un nouveau métier nommé le
+                        "dermofacialisme" permettant de réunir ces derniers avec des clients. La plateforme vise aussi
+                        des professionnels en recherche de formation pour permettre la popularisation de ce nouveau
+                        métier.​ L'application contient notamment un service de prise de rendez-vous (via l'𝗔𝗣𝗜
+                        𝗖𝗮𝗹𝗲𝗻𝗱𝗹𝘆) ainsi que des visio-consultations directement depuis le site (via l'𝗔𝗣𝗜
+                        𝗭𝗼𝗼𝗺)
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="row gy-4">
+                  <h2>Objectif et contexte</h2>
+                  <p>L’objectif principal de cette application est de facilité la tâche des producteurs de musiques sur
+                    youtube.
+                    En effet lorsque ces derniers mettent leurs vidéos cela peut s’avérer très fatidieu, par exemple
+                    lorsque l’on met les tags de la vidéo, ces derniers servant à mettre en avant la vidéo, cela peut
+                    être très long car il faut parfois remplir plus de 100 tags.
+
+                    Cette application m’a été commandité par un ami producteur de musique pour les causes cités
+                    auparavant.</p>
+                  <h2>Les étapes</h2>
+                  <p>Tout d’abord j’ai défini avec l’aide de mon ami, les différentes fonctionnalités que l’application
+                    devrait avoir,
+                    j’ai ensuite créée une maquette de l’application présentant l’aspect visuel de cette dernière et
+                    l’ai fait validé.</p>
+                  <h2>Les résultats</h2>
+                  <p>Actuellement cette application est toujours utilisé, elle permet de faire gagner un temps précieux
+                    au quotidien à mon ami.</p>
+                  <h2>Compétences utilisés</h2>
+                  <div style="text-justify: flex;">
+                    <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#skillctg1modal3')">JAVA</a>
+                    <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#skillctg1modal4')">Angular</a>
+                      <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#skillctg1modal6')">SQL</a>
+                      <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#skillctg1modal2')">Méthode Agile</a>
+                      <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#skillctg1modal5')">API</a>
+                      <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#skillctg2modal3')">Communication</a>
+                  </div>
+                </div>
+            </section><!-- End Portfolio Details Section -->
+
+          </main><!-- End #main -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End of Modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="workmodal2" role="dialog" style="opacity: 1;">
+    <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-size: 18px;">OgChecker</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <main id="main">
+
+            <!-- ======= Portfolio Details Section ======= -->
+            <section id="portfolio-details" class="portfolio-details">
+              <div class="container">
+
+                <div class="row gy-4">
+
+                  <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper">
+                      <div class="swiper-wrapper align-items-center">
+
+                        <div class="swiper-slide">
+                          <img src="assets/img/.png" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                          <img src="assets/img/.png" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                          <img src="assets/img/.png" alt="">
+                        </div>
+
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="portfolio-description">
+                      <h2>Présentation</h2>
                       <p>
                         Projet en partenariat avec la société Victoria Arandia, visant à mettre en place une plateforme utilisant la technologie 𝗔𝗻𝗴𝘂𝗹𝗮𝗿𝗝𝗦 et 𝗝𝗘𝗘 autour d'un nouveau métier nommé le "dermofacialisme" permettant de réunir ces derniers avec des clients. La plateforme vise aussi des professionnels en recherche de formation pour permettre la popularisation de ce nouveau métier.​ L'application contient notamment un service de prise de rendez-vous (via l'𝗔𝗣𝗜 𝗖𝗮𝗹𝗲𝗻𝗱𝗹𝘆) ainsi que des visio-consultations directement depuis le site (via l'𝗔𝗣𝗜 𝗭𝗼𝗼𝗺)
                       </p>
@@ -115,6 +247,22 @@
 
                 </div>
 
+                <div class="row gy-4">
+                  <h2>Objectif et contexte</h2>
+                    <p>L’objectif principal de cette application est de facilité la tâche des producteurs de musiques sur youtube.
+                      En effet lorsque ces derniers mettent leurs vidéos cela peut s’avérer très fatidieu, par exemple lorsque l’on met les tags de la vidéo, ces derniers servant à mettre en avant la vidéo, cela peut être très long car il faut parfois remplir plus de 100 tags.
+                      
+                      Cette application m’a été commandité par un ami producteur de musique pour les causes cités auparavant.</p>
+                  <h2>Les étapes</h2>
+                  <p>Tout d’abord j’ai défini avec l’aide de mon ami, les différentes fonctionnalités que l’application devrait avoir,
+                    j’ai ensuite créée  une maquette de l’application présentant l’aspect visuel de cette dernière et l’ai fait validé.</p>
+                  <h2>Les résultats</h2>
+                  <p>Actuellement cette application est toujours utilisé, elle permet de faire gagner un temps précieux au quotidien à mon ami.</p>
+                  <h2>Compétences utilisés</h2>
+                  <div style="text-justify: flex;">
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg1modal1')">C#</a>
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg1modal5')">API</a>
+                </div>
               </div>
             </section><!-- End Portfolio Details Section -->
 
@@ -125,223 +273,14 @@
     </div>
   </div>
   <!-- End of Modal -->
-        <!-- Modal -->
-        <div class="modal fade" id="myModal2" role="dialog" style="opacity: 1;">
-          <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
-      
-            <!-- Modal content-->
-            <div class="modal-content">
-              <div class="modal-header">
-                <h4 class="modal-title" style="font-size: 18px;">OgChecker</h4>
-                <button type="button" class="close" data-dismiss="modal">&times;</button>
-              </div>
-              <div class="modal-body">
-                <main id="main">
-      
-                  <!-- ======= Portfolio Details Section ======= -->
-                  <section id="portfolio-details" class="portfolio-details">
-                    <div class="container">
-      
-                      <div class="row gy-4">
-      
-                        <div class="col-lg-8">
-                          <div class="portfolio-details-slider swiper">
-                            <div class="swiper-wrapper align-items-center">
-      
-                              <div class="swiper-slide">
-                                <img src="assets/img/OgChecker1.png" alt="">
-                              </div>
-      
-                              <div class="swiper-slide">
-                                <img src="assets/img/OgChecker2.png" alt="">
-                              </div>
-      
-                            </div>
-                            <div class="swiper-pagination"></div>
-                          </div>
-                        </div>
-      
-                        <div class="col-lg-4">
-                          <div class="portfolio-info">
-                            <h3>Informations</h3>
-                            <ul>
-                              <li><strong>Categorie</strong>: Application Windows</li>
-                              <li><strong>Technologies utilisées</strong>: C#/WPF</li>
-                              <li><strong>Client</strong>: Projet personnel</li>
-                              <li><strong>Date</strong>: mars 2021 – juil. 2021</li>
-                            </ul>
-                          </div>
-                          <div class="portfolio-description">
-                            <h2>Description</h2>
-                            <p>
-                              Projet personnel utilisant les technologies 𝗖# et 𝗪𝗣𝗙.
-                              Application permettant de vérifier si une liste de pseudos est pris ou non sur un site à l'aide de leurs 𝗔𝗣𝗜.
-                            </p>
-                          </div>
-                        </div>
-      
-                      </div>
-      
-                    </div>
-                  </section><!-- End Portfolio Details Section -->
-      
-                </main><!-- End #main -->
-              </div>
-            </div>
-      
-          </div>
-        </div>
-        <!-- End of Modal -->
-    <!-- Modal -->
-    <div class="modal fade" id="myModal3" role="dialog" style="opacity: 1;">
-      <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
-  
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" style="font-size: 18px;">YoutubeBeatUploader</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body">
-            <main id="main">
-  
-              <!-- ======= Portfolio Details Section ======= -->
-              <section id="portfolio-details" class="portfolio-details">
-                <div class="container">
-  
-                  <div class="row gy-4">
-  
-                    <div class="col-lg-8">
-                      <div class="portfolio-details-slider swiper">
-                        <div class="swiper-wrapper align-items-center">
-  
-                          <div class="swiper-slide">
-                            <img src="assets/img/YoutubeBeatUploader1.png" alt="">
-                          </div>
-  
-                          <div class="swiper-slide">
-                            <img src="assets/img/YoutubeBeatUploader2.png" alt="">
-                          </div>
-  
-                          <div class="swiper-slide">
-                            <img src="assets/img/YoutubeBeatUploader3.png" alt="">
-                          </div>
-  
-                        </div>
-                        <div class="swiper-pagination"></div>
-                      </div>
-                    </div>
-  
-                    <div class="col-lg-4">
-                      <div class="portfolio-info">
-                        <h3>Informations</h3>
-                        <ul>
-                          <li><strong>Categorie</strong>: Application Windows</li>
-                          <li><strong>Technologies utilisées</strong>: C#/WPF/API Google/OAuth2.0</li>
-                          <li><strong>Client</strong>: Projet personnel</li>
-                          <li><strong>Date</strong>: janv. 2021 – juin 2021</li>
-                        </ul>
-                      </div>
-                      <div class="portfolio-description">
-                        <h2>Description</h2>
-                        <p>
-                          Projet personnel utilisant les technologies 𝗖# et 𝗪𝗣𝗙.
-                          Application permettant de simplifier la publication de productions musicales sur YouTube à l'aide de l'𝗔𝗣𝗜 𝗚𝗼𝗼𝗴𝗹𝗲.
-                          Elle contient notamment la génération de tags en se basant sur le titre de la production ainsi que la connexion et la déconnexion via 𝗢𝗔𝘂𝘁𝗵𝟮.𝟬.
-                        </p>
-                      </div>
-                    </div>
-  
-                  </div>
-  
-                </div>
-              </section><!-- End Portfolio Details Section -->
-  
-            </main><!-- End #main -->
-          </div>
-        </div>
-  
-      </div>
-    </div>
-    <!-- End of Modal -->
-    <!-- Modal -->
-    <div class="modal fade" id="myModal4" role="dialog" style="opacity: 1;">
-      <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
-  
-        <!-- Modal content-->
-        <div class="modal-content">
-          <div class="modal-header">
-            <h4 class="modal-title" style="font-size: 18px;">Scodeliose</h4>
-            <button type="button" class="close" data-dismiss="modal">&times;</button>
-          </div>
-          <div class="modal-body">
-            <main id="main">
-  
-              <!-- ======= Portfolio Details Section ======= -->
-              <section id="portfolio-details" class="portfolio-details">
-                <div class="container">
-  
-                  <div class="row gy-4">
-  
-                    <div class="col-lg-8">
-                      <div class="portfolio-details-slider swiper">
-                        <div class="swiper-wrapper align-items-center">
-  
-                          <div class="swiper-slide">
-                            <img src="assets/img/portfolio-details-1.jpg" alt="">
-                          </div>
-  
-                          <div class="swiper-slide">
-                            <img src="assets/img/portfolio-details-2.jpg" alt="">
-                          </div>
-  
-                          <div class="swiper-slide">
-                            <img src="assets/img/portfolio-details-3.jpg" alt="">
-                          </div>
-  
-                        </div>
-                        <div class="swiper-pagination"></div>
-                      </div>
-                    </div>
-  
-                    <div class="col-lg-4">
-                      <div class="portfolio-info">
-                        <h3>Informations</h3>
-                        <ul>
-                          <li><strong>Categorie</strong>: Application Windows</li>
-                          <li><strong>Technologies utilisées</strong>: C#/WPF</li>
-                          <li><strong>Client</strong>: Kinadom</li>
-                          <li><strong>Date</strong>: sept. 2020 – janv. 2021</li>
-                        </ul>
-                      </div>
-                      <div class="portfolio-description">
-                        <h2>Description</h2>
-                        <p>
-                          Réalisation d'une application 𝗪𝗶𝗻𝗱𝗼𝘄𝘀 en 𝗖#/𝗪𝗣𝗙 en association avec une équipe d’étudiants en Institut de Formation en Masso-Kinésithérapie à destination des praticiens pour accompagner les patients dans leur suivi des soins à domicile en dehors des séances de rééducation.
-                        </p>
-                      </div>
-                    </div>
-  
-                  </div>
-  
-                </div>
-              </section><!-- End Portfolio Details Section -->
-  
-            </main><!-- End #main -->
-          </div>
-        </div>
-  
-      </div>
-    </div>
-    <!-- End of Modal -->
-      <!-- Modal -->
-  <div class="modal fade" id="myModal5" role="dialog" style="opacity: 1;">
+  <!-- Modal -->
+  <div class="modal fade" id="workmodal3" role="dialog" style="opacity: 1;">
     <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
 
       <!-- Modal content-->
       <div class="modal-content">
         <div class="modal-header">
-          <h4 class="modal-title" style="font-size: 18px;">Logicode</h4>
+          <h4 class="modal-title" style="font-size: 18px;">YoutubeBeatUploader</h4>
           <button type="button" class="close" data-dismiss="modal">&times;</button>
         </div>
         <div class="modal-body">
@@ -358,15 +297,15 @@
                       <div class="swiper-wrapper align-items-center">
 
                         <div class="swiper-slide">
-                          <img src="assets/img/portfolio-details-1.jpg" alt="">
+                          <img src="assets/img/.png" alt="">
                         </div>
 
                         <div class="swiper-slide">
-                          <img src="assets/img/portfolio-details-2.jpg" alt="">
+                          <img src="assets/img/.png" alt="">
                         </div>
 
                         <div class="swiper-slide">
-                          <img src="assets/img/portfolio-details-3.jpg" alt="">
+                          <img src="assets/img/.png" alt="">
                         </div>
 
                       </div>
@@ -375,25 +314,33 @@
                   </div>
 
                   <div class="col-lg-4">
-                    <div class="portfolio-info">
-                      <h3>Informations</h3>
-                      <ul>
-                        <li><strong>Categorie</strong>: Site web PHP</li>
-                        <li><strong>Technologies utilisées</strong>: HTMl/CSS/PHP/MySQL</li>
-                        <li><strong>Client</strong>: Projet personnel</li>
-                        <li><strong>Date</strong>: mars 2020 – juil. 2020</li>
-                      </ul>
-                    </div>
                     <div class="portfolio-description">
-                      <h2>Description</h2>
+                      <h2>Présentation</h2>
                       <p>
-                        Création d'un site 𝘄𝗲𝗯 en 𝗣𝗛𝗣 avec 𝗺𝘆𝗦𝗤𝗟 permettant la publication d'annonces immobilières
+                        Projet en partenariat avec la société Victoria Arandia, visant à mettre en place une plateforme utilisant la technologie 𝗔𝗻𝗴𝘂𝗹𝗮𝗿𝗝𝗦 et 𝗝𝗘𝗘 autour d'un nouveau métier nommé le "dermofacialisme" permettant de réunir ces derniers avec des clients. La plateforme vise aussi des professionnels en recherche de formation pour permettre la popularisation de ce nouveau métier.​ L'application contient notamment un service de prise de rendez-vous (via l'𝗔𝗣𝗜 𝗖𝗮𝗹𝗲𝗻𝗱𝗹𝘆) ainsi que des visio-consultations directement depuis le site (via l'𝗔𝗣𝗜 𝗭𝗼𝗼𝗺)
                       </p>
                     </div>
                   </div>
 
                 </div>
 
+                <div class="row gy-4">
+                  <h2>Objectif et contexte</h2>
+                    <p>L’objectif principal de cette application est de facilité la tâche des producteurs de musiques sur youtube.
+                      En effet lorsque ces derniers mettent leurs vidéos cela peut s’avérer très fatidieu, par exemple lorsque l’on met les tags de la vidéo, ces derniers servant à mettre en avant la vidéo, cela peut être très long car il faut parfois remplir plus de 100 tags.
+                      
+                      Cette application m’a été commandité par un ami producteur de musique pour les causes cités auparavant.</p>
+                  <h2>Les étapes</h2>
+                  <p>Tout d’abord j’ai défini avec l’aide de mon ami, les différentes fonctionnalités que l’application devrait avoir,
+                    j’ai ensuite créée  une maquette de l’application présentant l’aspect visuel de cette dernière et l’ai fait validé.</p>
+                  <h2>Les résultats</h2>
+                  <p>Actuellement cette application est toujours utilisé, elle permet de faire gagner un temps précieux au quotidien à mon ami.</p>
+                  <h2>Compétences utilisés</h2>
+                  <div style="text-justify: flex;">
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg1modal1')">C#</a>
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg1modal5')">API</a>
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg2modal2')">Gestion de budget</a>
+                </div>
               </div>
             </section><!-- End Portfolio Details Section -->
 
@@ -404,14 +351,217 @@
     </div>
   </div>
   <!-- End of Modal -->
-    <!-- Modal -->
-    <div class="modal fade" id="myModal6" role="dialog" style="opacity: 1;">
+  <!-- Modal -->
+  <div class="modal fade" id="workmodal4" role="dialog" style="opacity: 1;">
+    <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-size: 18px;">Mat'moi ça</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <main id="main">
+
+            <!-- ======= Portfolio Details Section ======= -->
+            <section id="portfolio-details" class="portfolio-details">
+              <div class="container">
+
+                <div class="row gy-4">
+
+                  <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper">
+                      <div class="swiper-wrapper align-items-center">
+
+                        <div class="swiper-slide">
+                          <img src="assets/img/.png" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                          <img src="assets/img/.png" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                          <img src="assets/img/.png" alt="">
+                        </div>
+
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="portfolio-description">
+                      <h2>Présentation</h2>
+                      <p>
+                        Projet en partenariat avec la société Victoria Arandia, visant à mettre en place une plateforme utilisant la technologie 𝗔𝗻𝗴𝘂𝗹𝗮𝗿𝗝𝗦 et 𝗝𝗘𝗘 autour d'un nouveau métier nommé le "dermofacialisme" permettant de réunir ces derniers avec des clients. La plateforme vise aussi des professionnels en recherche de formation pour permettre la popularisation de ce nouveau métier.​ L'application contient notamment un service de prise de rendez-vous (via l'𝗔𝗣𝗜 𝗖𝗮𝗹𝗲𝗻𝗱𝗹𝘆) ainsi que des visio-consultations directement depuis le site (via l'𝗔𝗣𝗜 𝗭𝗼𝗼𝗺)
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="row gy-4">
+                  <h2>Objectif et contexte</h2>
+                    <p>L’objectif principal de cette application est de facilité la tâche des producteurs de musiques sur youtube.
+                      En effet lorsque ces derniers mettent leurs vidéos cela peut s’avérer très fatidieu, par exemple lorsque l’on met les tags de la vidéo, ces derniers servant à mettre en avant la vidéo, cela peut être très long car il faut parfois remplir plus de 100 tags.
+                      
+                      Cette application m’a été commandité par un ami producteur de musique pour les causes cités auparavant.</p>
+                  <h2>Les étapes</h2>
+                  <p>Tout d’abord j’ai défini avec l’aide de mon ami, les différentes fonctionnalités que l’application devrait avoir,
+                    j’ai ensuite créée  une maquette de l’application présentant l’aspect visuel de cette dernière et l’ai fait validé.</p>
+                  <h2>Les résultats</h2>
+                  <p>Actuellement cette application est toujours utilisé, elle permet de faire gagner un temps précieux au quotidien à mon ami.</p>
+                  <h2>Compétences utilisés</h2>
+                  <div style="text-justify: flex;">
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg2modal3')">Communication</a>
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg2modal2')">Gestion de budget</a>
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg2modal1')">Evénementielle</a>
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg2modal4')">Gestion de projet</a>
+                </div>
+              </div>
+            </section><!-- End Portfolio Details Section -->
+
+          </main><!-- End #main -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End of Modal -->
+  <!-- Modal -->
+  <div class="modal fade" id="workmodal5" role="dialog" style="opacity: 1;">
+    <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-size: 18px;">Hypotech</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <main id="main">
+
+            <!-- ======= Portfolio Details Section ======= -->
+            <section id="portfolio-details" class="portfolio-details">
+              <div class="container">
+
+                <div class="row gy-4">
+
+                  <div class="col-lg-8">
+                    <div class="portfolio-details-slider swiper">
+                      <div class="swiper-wrapper align-items-center">
+
+                        <div class="swiper-slide">
+                          <img src="assets/img/.png" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                          <img src="assets/img/.png" alt="">
+                        </div>
+
+                        <div class="swiper-slide">
+                          <img src="assets/img/.png" alt="">
+                        </div>
+
+                      </div>
+                      <div class="swiper-pagination"></div>
+                    </div>
+                  </div>
+
+                  <div class="col-lg-4">
+                    <div class="portfolio-description">
+                      <h2>Présentation</h2>
+                      <p>
+                        Projet en partenariat avec la société Victoria Arandia, visant à mettre en place une plateforme utilisant la technologie 𝗔𝗻𝗴𝘂𝗹𝗮𝗿𝗝𝗦 et 𝗝𝗘𝗘 autour d'un nouveau métier nommé le "dermofacialisme" permettant de réunir ces derniers avec des clients. La plateforme vise aussi des professionnels en recherche de formation pour permettre la popularisation de ce nouveau métier.​ L'application contient notamment un service de prise de rendez-vous (via l'𝗔𝗣𝗜 𝗖𝗮𝗹𝗲𝗻𝗱𝗹𝘆) ainsi que des visio-consultations directement depuis le site (via l'𝗔𝗣𝗜 𝗭𝗼𝗼𝗺)
+                      </p>
+                    </div>
+                  </div>
+
+                </div>
+
+                <div class="row gy-4">
+                  <h2>Objectif et contexte</h2>
+                    <p>L’objectif principal de cette application est de facilité la tâche des producteurs de musiques sur youtube.
+                      En effet lorsque ces derniers mettent leurs vidéos cela peut s’avérer très fatidieu, par exemple lorsque l’on met les tags de la vidéo, ces derniers servant à mettre en avant la vidéo, cela peut être très long car il faut parfois remplir plus de 100 tags.
+                      
+                      Cette application m’a été commandité par un ami producteur de musique pour les causes cités auparavant.</p>
+                  <h2>Les étapes</h2>
+                  <p>Tout d’abord j’ai défini avec l’aide de mon ami, les différentes fonctionnalités que l’application devrait avoir,
+                    j’ai ensuite créée  une maquette de l’application présentant l’aspect visuel de cette dernière et l’ai fait validé.</p>
+                  <h2>Les résultats</h2>
+                  <p>Actuellement cette application est toujours utilisé, elle permet de faire gagner un temps précieux au quotidien à mon ami.</p>
+                  <h2>Compétences utilisés</h2>
+                  <div style="text-justify: flex;">
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg1modal3')">JAVA</a>
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg1modal6')">SQL</a>
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg1modal2')">Méthode agile</a>
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg1modal5')">API</a>
+                  <a class="btn btn-primary" data-dismiss="modal" role="button" onclick="redirectButtonLink('#skillctg2modal2')">Gestion de projet</a>
+                </div>
+              </div>
+            </section><!-- End Portfolio Details Section -->
+
+          </main><!-- End #main -->
+        </div>
+      </div>
+
+    </div>
+  </div>
+  <!-- End of Modal -->
+  <!-- Skills Modals -->
+  <div class="modal fade" id="skillctg1modal1" role="dialog" style="opacity: 1;">
+    <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-size: 18px;">C#</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <main id="main">
+
+            <!-- ======= Portfolio Details Section ======= -->
+            <section id="portfolio-details" class="portfolio-details">
+              <div class="container">
+
+                <div class="row gy-4">
+                  <h2>Définition</h2>
+                  <p>texte</p>
+                  <h2>Utilisation</h2>
+                  <p>texte</p>
+                  <h2>Autocritique</h2>
+                  <p>texte</p>
+                  <h2>Evolution</h2>
+                  <p>texte</p>
+                  <div style="text-justify: flex;">
+                    <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#workmodal3')">YoutubeBeatUploader</a>
+                    <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#workmodal2')">OgChecker</a>
+                  </div>
+
+                </div>
+            </section><!-- End Portfolio Details Section -->
+
+          </main><!-- End #main -->
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- End of modal-->
+    <!-- Skills Modals -->
+    <div class="modal fade" id="skillctg1modal2" role="dialog" style="opacity: 1;">
       <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
   
         <!-- Modal content-->
         <div class="modal-content">
           <div class="modal-header">
-            <h4 class="modal-title" style="font-size: 18px;">Tech'Hop</h4>
+            <h4 class="modal-title" style="font-size: 18px;">Méthode agile</h4>
             <button type="button" class="close" data-dismiss="modal">&times;</button>
           </div>
           <div class="modal-body">
@@ -422,58 +572,384 @@
                 <div class="container">
   
                   <div class="row gy-4">
-  
-                    <div class="col-lg-8">
-                      <div class="portfolio-details-slider swiper">
-                        <div class="swiper-wrapper align-items-center">
-  
-                          <div class="swiper-slide">
-                            <img src="assets/img/portfolio-details-1.jpg" alt="">
-                          </div>
-  
-                          <div class="swiper-slide">
-                            <img src="assets/img/portfolio-details-2.jpg" alt="">
-                          </div>
-  
-                          <div class="swiper-slide">
-                            <img src="assets/img/portfolio-details-3.jpg" alt="">
-                          </div>
-  
-                        </div>
-                        <div class="swiper-pagination"></div>
-                      </div>
-                    </div>
-  
-                    <div class="col-lg-4">
-                      <div class="portfolio-info">
-                        <h3>Informations</h3>
-                        <ul>
-                          <li><strong>Categorie</strong>: Site web Node.js</li>
-                          <li><strong>Technologies utilisées</strong>: HTMl/CSS/Node.js</li>
-                          <li><strong>Client</strong>: NOSA</li>
-                          <li><strong>Date</strong>: sept. 2019 – janv. 2020</li>
-                        </ul>
-                      </div>
-                      <div class="portfolio-description">
-                        <h2>Description</h2>
-                        <p>
-                          Création d'un site web en 𝗡𝗼𝗱𝗲.𝗷𝘀 utilisant les technologies 𝗛𝗧𝗠𝗟 et 𝗖𝗦𝗦 pour l'association de HipHop NOSA
-                        </p>
-                      </div>
+                    <h2>Définition</h2>
+                    <p>texte</p>
+                    <h2>Utilisation</h2>
+                    <p>texte</p>
+                    <h2>Autocritique</h2>
+                    <p>texte</p>
+                    <h2>Evolution</h2>
+                    <p>texte</p>
+                    <div style="text-justify: flex;">
+                      <a class="btn btn-primary" data-dismiss="modal" role="button"
+                        onclick="redirectButtonLink('#workmodal1')">Argos</a>
+                      <a class="btn btn-primary" data-dismiss="modal" role="button"
+                        onclick="redirectButtonLink('#workmodal5')">Hypotech</a>
                     </div>
   
                   </div>
-  
-                </div>
               </section><!-- End Portfolio Details Section -->
   
             </main><!-- End #main -->
           </div>
         </div>
   
+  
       </div>
     </div>
-    <!-- End of Modal -->
+    <!-- End of modal-->
+      <!-- Skills Modals -->
+  <div class="modal fade" id="skillctg1modal3" role="dialog" style="opacity: 1;">
+    <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-size: 18px;">Java</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <main id="main">
+
+            <!-- ======= Portfolio Details Section ======= -->
+            <section id="portfolio-details" class="portfolio-details">
+              <div class="container">
+
+                <div class="row gy-4">
+                  <h2>Définition</h2>
+                  <p>texte</p>
+                  <h2>Utilisation</h2>
+                  <p>texte</p>
+                  <h2>Autocritique</h2>
+                  <p>texte</p>
+                  <h2>Evolution</h2>
+                  <p>texte</p>
+                  <div style="text-justify: flex;">
+                    <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#workmodal1')">ARGOS</a>
+                    <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#workmodal5')">Hypotech</a>
+                  </div>
+
+                </div>
+            </section><!-- End Portfolio Details Section -->
+
+          </main><!-- End #main -->
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- End of modal-->
+    <!-- Skills Modals -->
+    <div class="modal fade" id="skillctg1modal4" role="dialog" style="opacity: 1;">
+      <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
+  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" style="font-size: 18px;">Angular</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <main id="main">
+  
+              <!-- ======= Portfolio Details Section ======= -->
+              <section id="portfolio-details" class="portfolio-details">
+                <div class="container">
+  
+                  <div class="row gy-4">
+                    <h2>Définition</h2>
+                    <p>texte</p>
+                    <h2>Utilisation</h2>
+                    <p>texte</p>
+                    <h2>Autocritique</h2>
+                    <p>texte</p>
+                    <h2>Evolution</h2>
+                    <p>texte</p>
+                    <div style="text-justify: flex;">
+                      <a class="btn btn-primary" data-dismiss="modal" role="button"
+                        onclick="redirectButtonLink('#workmodal1')">ARGOS</a>
+                    </div>
+  
+                  </div>
+              </section><!-- End Portfolio Details Section -->
+  
+            </main><!-- End #main -->
+          </div>
+        </div>
+  
+  
+      </div>
+    </div>
+    <!-- End of modal-->
+      <!-- Skills Modals -->
+  <div class="modal fade" id="skillctg1modal5" role="dialog" style="opacity: 1;">
+    <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-size: 18px;">API</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <main id="main">
+
+            <!-- ======= Portfolio Details Section ======= -->
+            <section id="portfolio-details" class="portfolio-details">
+              <div class="container">
+
+                <div class="row gy-4">
+                  <h2>Définition</h2>
+                  <p>texte</p>
+                  <h2>Utilisation</h2>
+                  <p>texte</p>
+                  <h2>Autocritique</h2>
+                  <p>texte</p>
+                  <h2>Evolution</h2>
+                  <p>texte</p>
+                  <div style="text-justify: flex;">
+                    <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#workmodal3')">YoutubeBeatUploader</a>
+                    <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#workmodal2')">OgChecker</a>
+                      <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#workmodal1')">ARGOS</a>
+                      <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#workmodal5')">Hypotech</a>
+                  </div>
+
+                </div>
+            </section><!-- End Portfolio Details Section -->
+
+          </main><!-- End #main -->
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- End of modal-->
+    <!-- Skills Modals -->
+    <div class="modal fade" id="skillctg1modal6" role="dialog" style="opacity: 1;">
+      <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
+  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" style="font-size: 18px;">SQL</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <main id="main">
+  
+              <!-- ======= Portfolio Details Section ======= -->
+              <section id="portfolio-details" class="portfolio-details">
+                <div class="container">
+  
+                  <div class="row gy-4">
+                    <h2>Définition</h2>
+                    <p>texte</p>
+                    <h2>Utilisation</h2>
+                    <p>texte</p>
+                    <h2>Autocritique</h2>
+                    <p>texte</p>
+                    <h2>Evolution</h2>
+                    <p>texte</p>
+                    <div style="text-justify: flex;">
+                      <a class="btn btn-primary" data-dismiss="modal" role="button"
+                        onclick="redirectButtonLink('#workmodal1')">ARGOS</a>
+                      <a class="btn btn-primary" data-dismiss="modal" role="button"
+                        onclick="redirectButtonLink('#workmodal5')">Hypotech</a>
+                    </div>
+  
+                  </div>
+              </section><!-- End Portfolio Details Section -->
+  
+            </main><!-- End #main -->
+          </div>
+        </div>
+  
+  
+      </div>
+    </div>
+    <!-- End of modal-->
+      <!-- Skills Modals -->
+  <div class="modal fade" id="skillctg2modal1" role="dialog" style="opacity: 1;">
+    <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-size: 18px;">Evénementielle</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <main id="main">
+
+            <!-- ======= Portfolio Details Section ======= -->
+            <section id="portfolio-details" class="portfolio-details">
+              <div class="container">
+
+                <div class="row gy-4">
+                  <h2>Définition</h2>
+                  <p>texte</p>
+                  <h2>Utilisation</h2>
+                  <p>texte</p>
+                  <h2>Autocritique</h2>
+                  <p>texte</p>
+                  <h2>Evolution</h2>
+                  <p>texte</p>
+                  <div style="text-justify: flex;">
+                    <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#workmodal4')">Mat'moi ça</a>
+                  </div>
+
+                </div>
+            </section><!-- End Portfolio Details Section -->
+
+          </main><!-- End #main -->
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- End of modal-->
+    <!-- Skills Modals -->
+  <div class="modal fade" id="skillctg2modal2" role="dialog" style="opacity: 1;">
+    <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-size: 18px;">Gestion de projet</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <main id="main">
+
+            <!-- ======= Portfolio Details Section ======= -->
+            <section id="portfolio-details" class="portfolio-details">
+              <div class="container">
+
+                <div class="row gy-4">
+                  <h2>Définition</h2>
+                  <p>texte</p>
+                  <h2>Utilisation</h2>
+                  <p>texte</p>
+                  <h2>Autocritique</h2>
+                  <p>texte</p>
+                  <h2>Evolution</h2>
+                  <p>texte</p>
+                  <div style="text-justify: flex;">
+                    <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#workmodal4')">Mat'moi ça</a>
+                    <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#workmodal5')">Hypotech</a>
+                  </div>
+
+                </div>
+            </section><!-- End Portfolio Details Section -->
+
+          </main><!-- End #main -->
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- End of modal-->
+    <!-- Skills Modals -->
+    <div class="modal fade" id="skillctg2modal3" role="dialog" style="opacity: 1;">
+      <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
+  
+        <!-- Modal content-->
+        <div class="modal-content">
+          <div class="modal-header">
+            <h4 class="modal-title" style="font-size: 18px;">Communication</h4>
+            <button type="button" class="close" data-dismiss="modal">&times;</button>
+          </div>
+          <div class="modal-body">
+            <main id="main">
+  
+              <!-- ======= Portfolio Details Section ======= -->
+              <section id="portfolio-details" class="portfolio-details">
+                <div class="container">
+  
+                  <div class="row gy-4">
+                    <h2>Définition</h2>
+                    <p>texte</p>
+                    <h2>Utilisation</h2>
+                    <p>texte</p>
+                    <h2>Autocritique</h2>
+                    <p>texte</p>
+                    <h2>Evolution</h2>
+                    <p>texte</p>
+                    <div style="text-justify: flex;">
+                      <a class="btn btn-primary" data-dismiss="modal" role="button"
+                        onclick="redirectButtonLink('#workmodal4')">Mat'moi ça</a>
+                      <a class="btn btn-primary" data-dismiss="modal" role="button"
+                        onclick="redirectButtonLink('#workmodal1')">ARGOS</a>
+                    </div>
+  
+                  </div>
+              </section><!-- End Portfolio Details Section -->
+  
+            </main><!-- End #main -->
+          </div>
+        </div>
+  
+  
+      </div>
+    </div>
+    <!-- End of modal-->
+      <!-- Skills Modals -->
+  <div class="modal fade" id="skillctg2modal4" role="dialog" style="opacity: 1;">
+    <div class="modal-dialog" style="margin: 90px;max-width:8000px;margin-top: 30vh;height:100vh">
+
+      <!-- Modal content-->
+      <div class="modal-content">
+        <div class="modal-header">
+          <h4 class="modal-title" style="font-size: 18px;">Gestion de budget</h4>
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+        </div>
+        <div class="modal-body">
+          <main id="main">
+
+            <!-- ======= Portfolio Details Section ======= -->
+            <section id="portfolio-details" class="portfolio-details">
+              <div class="container">
+
+                <div class="row gy-4">
+                  <h2>Définition</h2>
+                  <p>texte</p>
+                  <h2>Utilisation</h2>
+                  <p>texte</p>
+                  <h2>Autocritique</h2>
+                  <p>texte</p>
+                  <h2>Evolution</h2>
+                  <p>texte</p>
+                  <div style="text-justify: flex;">
+                    <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#workmodal3')">YoutubeBeatUploader</a>
+                    <a class="btn btn-primary" data-dismiss="modal" role="button"
+                      onclick="redirectButtonLink('#workmodal5')">Hypotech</a>
+                  </div>
+
+                </div>
+            </section><!-- End Portfolio Details Section -->
+
+          </main><!-- End #main -->
+        </div>
+      </div>
+
+
+    </div>
+  </div>
+  <!-- End of modal-->
   <!-- ======= Hero Section ======= -->
   <div id="hero" class="hero bg-image">
     <div class="overlay-itro"></div>
@@ -482,9 +958,7 @@
         <div class="container">
           <!--<p class="display-6 color-d">Hello, world!</p>-->
           <h1 class="hero-title mb-4">Yanis Fauthoux</h1>
-          <p class="hero-subtitle"><span class="typed"
-              data-typed-items="Developpeur,Étudiant,Créatif,Déterminé,Méticuleux"></span></p>
-          <!-- <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Learn More</a></p> -->
+          <p class="pt-3"><a class="btn btn-primary btn js-scroll px-4" href="#about" role="button">Présentation</a></p>
         </div>
       </div>
     </div>
@@ -497,6 +971,15 @@
       <div class="container">
         <div class="row">
           <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Présentation
+              </h3>
+              <p class="subtitle-a">
+                Lorem ipsum ou quoi la
+              </p>
+              <div class="line-mf"></div>
+            </div>
             <div class="box-shadow-full">
               <div class="row">
                 <div class="col-md-6">
@@ -562,80 +1045,6 @@
       </div>
     </section><!-- End About Section -->
 
-    <!-- ======= Counter Section ======= -->
-    <div class="section-counter paralax-mf bg-image" style="background-image: url(assets/img/counters-bg.jpg)">
-      <div class="overlay-mf"></div>
-      <div class="container position-relative">
-        <div class="row">
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-check"></i></span>
-              </div>
-              <div class="counter-num">
-                <p data-purecounter-start="0" data-purecounter-end="6" data-purecounter-duration="1"
-                  class="counter purecounter"></p>
-                <span class="counter-text">Projets complétés</span>
-              </div>
-            </div>
-          </div>
-          <!-- <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-journal-richtext"></i></span>
-              </div>
-              <div class="counter-num">
-                <div style="display: inline;" ><p style="display: inline;" data-purecounter-start="0" data-purecounter-end="650" data-purecounter-duration="1" class="counter purecounter"></p><p style="font-size: 2rem; display: inline;"> / </p> <p style="font-size: 2rem; display: inline;">1000</p></div>
-                <br>
-                <span class="counter-text">Points au Projet-voltaire</span>
-              </div>
-            </div>
-          </div> -->
-          <!-- <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-people"></i></span>
-              </div>
-              <div class="counter-num">
-                <div style="display: inline;" ><p style="display: inline;" data-purecounter-start="0" data-purecounter-end="930" data-purecounter-duration="1" class="counter purecounter"></p><p style="font-size: 2rem; display: inline;"> / </p> <p style="font-size: 2rem; display: inline;">990</p></div>
-                <br>
-                <span class="counter-text">Points au TOEIC</span>
-              </div>
-            </div>
-          </div> -->
-                    <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-people"></i></span>
-              </div>
-              <div class="counter-num">
-                <div style="display: inline;" ><p style="display: inline;" data-purecounter-start="0" data-purecounter-end="74" data-purecounter-duration="1" class="counter purecounter"></p><p style="font-size: 2rem; display: inline;"> / </p> <p style="font-size: 2rem; display: inline;">100</p></div>
-                <br>
-                <span class="counter-text">EFSET English Certificate (Niveau C2)</span>
-              </div>
-            </div>
-          </div>
-          <div class="col-sm-3 col-lg-3">
-            <div class="counter-box pt-4 pt-md-0">
-              <div class="counter-ico">
-                <span class="ico-circle"><i class="bi bi-award"></i></span>
-              </div>
-              <div class="counter-num">
-                <div style="display: inline;">
-                  <p style="display: inline;" data-purecounter-start="0" data-purecounter-end="1798"
-                    data-purecounter-duration="1" class="counter purecounter"></p>
-                  <p style="font-size: 2rem; display: inline;"><sup style="display: inline;">ème</sup> / </p>
-                  <p style="font-size: 2rem; display: inline;">5513</p>
-                </div>
-                <br>
-                <span class="counter-text">Classement BattleDev</span>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </div><!-- End Counter Section -->
-
     <!-- ======= Portfolio Section ======= -->
     <section id="work" class="portfolio-mf sect-pt4 route">
       <div class="container">
@@ -643,10 +1052,10 @@
           <div class="col-sm-12">
             <div class="title-box text-center">
               <h3 class="title-a">
-                Projets
+                Réalisations
               </h3>
               <p class="subtitle-a">
-                Projets réalisés lors de mon cursus scolaire ainsi que dans mon temps libre
+                Lorem ipsum ou quoi la
               </p>
               <div class="line-mf"></div>
             </div>
@@ -655,7 +1064,7 @@
         <div class="row">
           <div class="col-md-4">
             <div class="work-box">
-              <a data-toggle="modal" data-target="#myModal1" style="cursor: pointer;" >
+              <a data-toggle="modal" data-target="#workmodal1" style="cursor: pointer;">
                 <div class="work-img">
                   <img src="assets/img/work-1.png" alt="" class="img-fluid">
                 </div>
@@ -663,14 +1072,16 @@
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Devmato</h2>
+                    <h2 class="w-title">ARGOS</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Site web Angular</span> / <span class="w-date">mars 2021 – juil. 2021</span>
+                      <span class="w-ctegory">Site web Angular</span> / <span class="w-date">mars 2021 – juil.
+                        2021</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="w-like">
-                      <a data-toggle="modal" data-target="#myModal1" style="cursor: pointer;"><span class="bi bi-plus-circle"></span></a>
+                      <a data-toggle="modal" data-target="#workmodal1" style="cursor: pointer;"><span
+                          class="bi bi-plus-circle"></span></a>
                     </div>
                   </div>
                 </div>
@@ -679,7 +1090,7 @@
           </div>
           <div class="col-md-4">
             <div class="work-box">
-              <a data-toggle="modal" data-target="#myModal2" style="cursor: pointer;">
+              <a data-toggle="modal" data-target="#workmodal2" style="cursor: pointer;">
                 <div class="work-img">
                   <img src="assets/img/work-2.png" alt="" class="img-fluid">
                 </div>
@@ -689,12 +1100,14 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">OgChecker</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Application Windows</span> / <span class="w-date">févr. 2021 – juil. 2021</span>
+                      <span class="w-ctegory">Application Windows</span> / <span class="w-date">févr. 2021 – juil.
+                        2021</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="w-like">
-                      <a data-toggle="modal" data-target="#myModal2" style="cursor: pointer;"><span class="bi bi-plus-circle"></span></a>
+                      <a data-toggle="modal" data-target="#workmodal2" style="cursor: pointer;"><span
+                          class="bi bi-plus-circle"></span></a>
                     </div>
                   </div>
                 </div>
@@ -703,7 +1116,7 @@
           </div>
           <div class="col-md-4">
             <div class="work-box">
-              <a data-toggle="modal" data-target="#myModal3" style="cursor: pointer;">
+              <a data-toggle="modal" data-target="#workmodal3" style="cursor: pointer;">
                 <div class="work-img">
                   <img src="assets/img/work-3.png" alt="" class="img-fluid">
                 </div>
@@ -713,21 +1126,25 @@
                   <div class="col-sm-8">
                     <h2 class="w-title">YoutubeBeatUploader</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Application Windows</span> / <span class="w-date">janv. 2021 – juin 2021</span>
+                      <span class="w-ctegory">Application Windows</span> / <span class="w-date">janv. 2021 – juin
+                        2021</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="w-like">
-                      <a data-toggle="modal" data-target="#myModal3" style="cursor: pointer;"><span class="bi bi-plus-circle"></span></a>
+                      <a data-toggle="modal" data-target="#workmodal3" style="cursor: pointer;"><span
+                          class="bi bi-plus-circle"></span></a>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
+          <div class="col-md-2">
+          </div>
           <div class="col-md-4">
             <div class="work-box">
-              <a data-toggle="modal" data-target="#myModal4" style="cursor: pointer;">
+              <a data-toggle="modal" data-target="#workmodal4" style="cursor: pointer;">
                 <div class="work-img">
                   <img src="assets/img/work-4.jpg" alt="" class="img-fluid">
                 </div>
@@ -735,14 +1152,16 @@
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Scodeliose</h2>
+                    <h2 class="w-title">Mat'moi ça</h2>
                     <div class="w-more">
-                      <span class="w-ctegory">Application Windows</span> / <span class="w-date">sept. 2020 – janv. 2021</span>
+                      <span class="w-ctegory">Application Windows</span> / <span class="w-date">sept. 2020 – janv.
+                        2021</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="w-like">
-                      <a data-toggle="modal" data-target="#myModal4" style="cursor: pointer;"><span class="bi bi-plus-circle"></span></a>
+                      <a data-toggle="modal" data-target="#workmodal4" style="cursor: pointer;"><span
+                          class="bi bi-plus-circle"></span></a>
                     </div>
                   </div>
                 </div>
@@ -751,7 +1170,7 @@
           </div>
           <div class="col-md-4">
             <div class="work-box">
-              <a data-toggle="modal" data-target="#myModal5" style="cursor: pointer;">
+              <a data-toggle="modal" data-target="#workmodal5" style="cursor: pointer;">
                 <div class="work-img">
                   <img src="assets/img/work-5.jpg" alt="" class="img-fluid">
                 </div>
@@ -759,38 +1178,15 @@
               <div class="work-content">
                 <div class="row">
                   <div class="col-sm-8">
-                    <h2 class="w-title">Logicode</h2>
+                    <h2 class="w-title">Hypotech</h2>
                     <div class="w-more">
                       <span class="w-ctegory">Site web PHP</span> / <span class="w-date">mars 2020 – juil. 2020</span>
                     </div>
                   </div>
                   <div class="col-sm-4">
                     <div class="w-like">
-                      <a data-toggle="modal" data-target="#myModal5" style="cursor: pointer;"><span class="bi bi-plus-circle"></span></a>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div class="col-md-4">
-            <div class="work-box">
-              <a data-toggle="modal" data-target="#myModal6" style="cursor: pointer;">
-                <div class="work-img">
-                  <img src="assets/img/work-6.jpg" alt="" class="img-fluid">
-                </div>
-              </a>
-              <div class="work-content">
-                <div class="row">
-                  <div class="col-sm-8">
-                    <h2 class="w-title">Tech'Hop</h2>
-                    <div class="w-more">
-                      <span class="w-ctegory">Site web Node.js</span> / <span class="w-date">sept. 2019 – janv. 2020</span>
-                    </div>
-                  </div>
-                  <div class="col-sm-4">
-                    <div class="w-like">
-                      <a data-toggle="modal" data-target="#myModal6" style="cursor: pointer;"><span class="bi bi-plus-circle"></span></a>
+                      <a data-toggle="modal" data-target="#workmodal5" style="cursor: pointer;"><span
+                          class="bi bi-plus-circle"></span></a>
                     </div>
                   </div>
                 </div>
@@ -802,7 +1198,273 @@
       </div>
     </section><!-- End Portfolio Section -->
 
+    <!-- Counter section -->
+    <div id="skills" class="section-counter paralax-mf bg-image"
+      style="padding: 4rem 0;background-image: url(assets/img/bg.jpg)">
 
+      <div
+        style="display: flex;flex-wrap: wrap;margin-top: calc(var(--bs-gutter-y) * -1);margin-right: calc(var(--bs-gutter-x) * -.5);margin-left: calc(var(--bs-gutter-x) * -.5);">
+        <div class="col-sm-12">
+          <div class="title-box text-center" style="margin-bottom: 0px;">
+            <h1 class="title-a" style="size: 80px;color : white">
+              Compétences
+            </h1>
+          </div>
+        </div>
+      </div>
+    </div>
+    <!-- ======= skillctg1 Section ======= -->
+    <section id="skillctg1" class="services-mf pt-5 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Compétences Techniques
+              </h3>
+              <p class="subtitle-a">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-4">
+            <a data-toggle="modal" data-target="#skillctg1modal1" style="cursor: pointer;">
+              <div class="service-box">
+                <div class="service-ico">
+                  <span class="ico-circle"><i class="bi"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em" viewBox="0 0 128 128">
+                        <path fill="currentColor"
+                          d="m117.5 33.5l.3-.2c-.6-1.1-1.5-2.1-2.4-2.6L67.1 2.9c-.8-.5-1.9-.7-3.1-.7c-1.2 0-2.3.3-3.1.7l-48 27.9c-1.7 1-2.9 3.5-2.9 5.4v55.7c0 1.1.2 2.3.9 3.4l-.2.1c.5.8 1.2 1.5 1.9 1.9l48.2 27.9c.8.5 1.9.7 3.1.7c1.2 0 2.3-.3 3.1-.7l48-27.9c1.7-1 2.9-3.5 2.9-5.4V36.1c.1-.8 0-1.7-.4-2.6m-53.5 70c-21.8 0-39.5-17.7-39.5-39.5S42.2 24.5 64 24.5c14.7 0 27.5 8.1 34.3 20l-13 7.5C81.1 44.5 73.1 39.5 64 39.5c-13.5 0-24.5 11-24.5 24.5s11 24.5 24.5 24.5c9.1 0 17.1-5 21.3-12.4l12.9 7.6c-6.8 11.8-19.6 19.8-34.2 19.8M115 62h-3.2l-.9 4h4.1v5h-5l-1.2 6h-4.9l1.2-6h-3.8l-1.2 6h-4.8l1.2-6H94v-5h3.5l.9-4H94v-5h5.3l1.2-6h4.9l-1.2 6h3.8l1.2-6h4.8l-1.2 6h2.2zm-12.7 4h3.8l.9-4h-3.8z" />
+                      </svg></i></span>
+                </div>
+                <div class="service-content">
+                  <h2 class="s-title">C#</h2>
+                  <p class="s-description text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                    provident vitae! Magni
+                    tempora perferendis eum non provident.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a data-toggle="modal" data-target="#skillctg1modal2" style="cursor: pointer;">
+              <div class="service-box">
+                <div class="service-ico">
+                  <span class="ico-circle"><i class="bi bi-card-checklist"></i></span>
+                </div>
+                <div class="service-content">
+                  <h2 class="s-title">Méthode agile</h2>
+                  <p class="s-description text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                    provident vitae! Magni
+                    tempora perferendis eum non provident.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a data-toggle="modal" data-target="#skillctg1modal3" style="cursor: pointer;">
+              <div class="service-box">
+                <div class="service-ico">
+                  <span class="ico-circle"><i class="bi"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                          d="m15.638 4.566l.056.032c-.758.4-2.924 1.69-2.924 3.332c0 .554.317 1.088.614 1.59c.262.442.509.858.509 1.238c0 .957-.933 1.7-1.46 2.042l-.1-.058c.199-.243.444-.65.444-1.084c0-.598-.307-1.076-.618-1.561c-.322-.501-.648-1.01-.648-1.67c0-2.292 3.115-3.522 4.127-3.861m-4.095 1.212c1.253-1.12 2.622-2.344 2.622-4.185c0-.833-.341-1.365-.51-1.578L13.6.046c.04.166.1.472.1.872c0 1.676-1.422 2.85-2.798 3.988C9.611 5.974 8.36 7.008 8.36 8.392c0 1.985 1.958 3.206 2.785 3.722l.063.04l.05-.03a6.17 6.17 0 0 0-.142-.152c-.636-.677-1.602-1.704-1.602-3.275c0-1.103.974-1.974 2.03-2.919m-.452 9.908c1.764 0 2.998-.253 3.546-.408l.832.48c-.793.403-2.551.71-4.382.71c-2.153 0-4.507-.462-4.514-1.078c-.005-.34.765-.566 1.595-.712l.05.029s-.281.101-.278.333c.004.35 1.42.646 3.15.646m-3.529 2.171c0-.407.839-.6 1.223-.677l.05.03c-.066.049-.102.116-.102.173c0 .267.93.511 2.356.511c1.278 0 1.988-.157 2.41-.258l.99.573c-.045.032-1.02.645-3.402.645c-1.731 0-3.525-.432-3.525-.997m8.529-1.728c1.18-.673 2.361-1.469 2.428-2.747c.044-.839-.727-1.454-1.57-1.29l.045-.112v-.002c.212-.064.474-.116.767-.116c.943 0 1.666.565 1.758 1.356c.186 1.586-2.062 2.618-3.321 2.973zm1.975 2.988c.01 1.09-3.698 1.738-7.012 1.767c-2.861.025-7.474-.515-7.484-1.605c-.006-.753 2-1.274 3.09-1.424l.115.065s-1.625.377-1.62 1.062c.006.683 3.425 1.274 5.894 1.253c3.825-.034 6.414-.657 6.72-1.502l.054-.031c.112.082.24.217.243.415M6.43 21.337a25.98 25.98 0 0 0 4.279.325c6.208-.054 7.96-1.58 8.23-1.912l.047.028c-.064 1.208-3.347 2.212-7.396 2.247c-2.061.018-3.937-.22-5.285-.615zm2.602-9.283c-1.079.083-3.396.426-3.396 1.036c0 .462 2.124 1.113 5.452 1.113c2.994 0 4.884-.565 5.325-.78l-.643-.375c-.46.125-2.169.506-4.682.506c-1.48 0-4.03-.273-4.03-.69c0-.374 1.591-.662 2.048-.745l.029-.005z" />
+                      </svg></i></span>
+                </div>
+                <div class="service-content">
+                  <h2 class="s-title">Java</h2>
+                  <p class="s-description text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                    provident vitae! Magni
+                    tempora perferendis eum non provident.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a data-toggle="modal" data-target="#skillctg1modal4" style="cursor: pointer;">
+              <div class="service-box">
+                <div class="service-ico">
+                  <span class="ico-circle"><i class="bi"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                          d="m12 2.5l8.84 3.15l-1.34 11.7L12 21.5l-7.5-4.15l-1.34-11.7zm0 2.1L6.47 17h2.06l1.11-2.78h4.7L15.45 17h2.05zm1.62 7.9h-3.23L12 8.63z" />
+                      </svg></i></span>
+                </div>
+                <div class="service-content">
+                  <h2 class="s-title">Angular</h2>
+                  <p class="s-description text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                    provident vitae! Magni
+                    tempora perferendis eum non provident.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a data-toggle="modal" data-target="#skillctg1modal5" style="cursor: pointer;">
+              <div class="service-box">
+                <div class="service-ico">
+                  <span class="ico-circle"><i class="bi"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em" viewBox="0 0 24 24">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                          stroke-width="2"
+                          d="M4 13h5m3 3V8h3a2 2 0 0 1 2 2v1a2 2 0 0 1-2 2h-3m8-5v8M9 16v-5.5a2.5 2.5 0 0 0-5 0V16" />
+                      </svg></i></span>
+                </div>
+                <div class="service-content">
+                  <h2 class="s-title">API</h2>
+                  <p class="s-description text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                    provident vitae! Magni
+                    tempora perferendis eum non provident.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-4">
+            <a data-toggle="modal" data-target="#skillctg1modal6" style="cursor: pointer;">
+              <div class="service-box">
+                <div class="service-ico">
+                  <span class="ico-circle"><i class="bi"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em" viewBox="0 0 256 256">
+                        <path fill="currentColor"
+                          d="M48 120a8 8 0 0 0 8-8V40h88v48a8 8 0 0 0 8 8h48v16a8 8 0 0 0 16 0V88a8 8 0 0 0-2.34-5.66l-56-56A8 8 0 0 0 152 24H56a16 16 0 0 0-16 16v72a8 8 0 0 0 8 8m112-68.69L188.69 80H160ZM228 208a8 8 0 0 1-8 8h-28a8 8 0 0 1-8-8v-56a8 8 0 0 1 16 0v48h20a8 8 0 0 1 8 8M91.82 196.31a20.82 20.82 0 0 1-9.19 15.23C77.44 215 71 216 65.14 216A60.72 60.72 0 0 1 50 214a8 8 0 0 1 4.3-15.41c4.38 1.2 14.95 2.7 19.55-.36c.89-.59 1.83-1.52 2.14-3.93c.35-2.67-.71-4.1-12.78-7.59c-9.35-2.7-25-7.23-23-23.11a20.55 20.55 0 0 1 9-14.95c11.84-8 30.72-3.31 32.83-2.76a8 8 0 0 1-4.08 15.48c-4.49-1.17-15.22-2.56-19.82.56a4.54 4.54 0 0 0-2 3.67c-.12.9-.14 1.08 1.12 1.9c2.31 1.49 6.44 2.68 10.45 3.84c9.79 2.83 26.35 7.66 24.11 24.97m71 3.23A39.05 39.05 0 0 0 168 180c0-19.85-14.35-36-32-36s-32 16.15-32 36s14.35 36 32 36a29.18 29.18 0 0 0 15.9-4.78l2.44 2.44a8 8 0 0 0 11.31-11.32ZM136 200c-8.82 0-16-9-16-20s7.18-20 16-20s16 9 16 20a24.41 24.41 0 0 1-1.18 7.51l-1.17-1.17a8 8 0 1 0-11.31 11.32l1.68 1.67a12.93 12.93 0 0 1-4.02.67" />
+                      </svg></i></span>
+                </div>
+                <div class="service-content">
+                  <h2 class="s-title">SQL</h2>
+                  <p class="s-description text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                    provident vitae! Magni
+                    tempora perferendis eum non provident.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+    <!-- end skillctg1 -->
+
+    <!-- ======= skillctg2 Section ======= -->
+    <section id="skillctg2" class="services-mf pt-5 route">
+      <div class="container">
+        <div class="row">
+          <div class="col-sm-12">
+            <div class="title-box text-center">
+              <h3 class="title-a">
+                Compétences Humaines
+              </h3>
+              <p class="subtitle-a">
+                Lorem ipsum, dolor sit amet consectetur adipisicing elit.
+              </p>
+              <div class="line-mf"></div>
+            </div>
+          </div>
+        </div>
+        <div class="row">
+          <div class="col-md-6">
+            <a data-toggle="modal" data-target="#skillctg2modal1" style="cursor: pointer;">
+              <div class="service-box">
+                <div class="service-ico">
+                  <span class="ico-circle"><i class="bi"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                          d="M14.5 18q-1.05 0-1.775-.725T12 15.5q0-1.05.725-1.775T14.5 13q1.05 0 1.775.725T17 15.5q0 1.05-.725 1.775T14.5 18M5 22q-.825 0-1.412-.587T3 20V6q0-.825.588-1.412T5 4h1V2h2v2h8V2h2v2h1q.825 0 1.413.588T21 6v14q0 .825-.587 1.413T19 22zm0-2h14V10H5zM5 8h14V6H5zm0 0V6z" />
+                      </svg></i></span>
+                </div>
+                <div class="service-content">
+                  <h2 class="s-title">Evénementielle</h2>
+                  <p class="s-description text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                    provident vitae! Magni
+                    tempora perferendis eum non provident.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a data-toggle="modal" data-target="#skillctg2modal2" style="cursor: pointer;">
+              <div class="service-box">
+                <div class="service-ico">
+                  <span class="ico-circle"><i class="bi"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em" viewBox="0 0 14 14">
+                        <path fill="none" stroke="currentColor" stroke-linecap="round" stroke-linejoin="round"
+                          d="M12.5.5h-11a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h11a1 1 0 0 0 1-1v-8a1 1 0 0 0-1-1m-12 3h13m-6.5 7v3m-1.5-3l-3 3m6-3l3 3" />
+                      </svg></i></span>
+                </div>
+                <div class="service-content">
+                  <h2 class="s-title">Gestion de projet</h2>
+                  <p class="s-description text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                    provident vitae! Magni
+                    tempora perferendis eum non provident.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a data-toggle="modal" data-target="#skillctg2modal3" style="cursor: pointer;">
+              <div class="service-box">
+                <div class="service-ico">
+                  <span class="ico-circle"><i class="bi"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em" viewBox="0 0 24 24">
+                        <path fill="currentColor"
+                          d="M12 8H4a2 2 0 0 0-2 2v4a2 2 0 0 0 2 2h1v4a1 1 0 0 0 1 1h2a1 1 0 0 0 1-1v-4h3l5 4V4zm3 7.6L13 14H4v-4h9l2-1.6zm6.5-3.6c0 1.71-.96 3.26-2.5 4V8c1.53.75 2.5 2.3 2.5 4" />
+                      </svg></i></span>
+                </div>
+                <div class="service-content">
+                  <h2 class="s-title">Communication</h2>
+                  <p class="s-description text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                    provident vitae! Magni
+                    tempora perferendis eum non provident.
+                  </p>
+                </div>
+              </div>
+            </a>
+          </div>
+          <div class="col-md-6">
+            <a data-toggle="modal" data-target="#skillctg2modal4" style="cursor: pointer;">
+              <div class="service-box">
+                <div class="service-ico">
+                  <span class="ico-circle"><i class="bi"><svg xmlns="http://www.w3.org/2000/svg" width="1em"
+                        height="1em" viewBox="0 0 24 24">
+                        <g fill="none">
+                          <path
+                            d="m12.593 23.258l-.011.002l-.071.035l-.02.004l-.014-.004l-.071-.035c-.01-.004-.019-.001-.024.005l-.004.01l-.017.428l.005.02l.01.013l.104.074l.015.004l.012-.004l.104-.074l.012-.016l.004-.017l-.017-.427c-.002-.01-.009-.017-.017-.018m.265-.113l-.013.002l-.185.093l-.01.01l-.003.011l.018.43l.005.012l.008.007l.201.093c.012.004.023 0 .029-.008l.004-.014l-.034-.614c-.003-.012-.01-.02-.02-.022m-.715.002a.023.023 0 0 0-.027.006l-.006.014l-.034.614c0 .012.007.02.017.024l.015-.002l.201-.093l.01-.008l.004-.011l.017-.43l-.003-.012l-.01-.01z" />
+                          <path fill="currentColor"
+                            d="M11.5 3a4.502 4.502 0 0 1 4.336 3.292l.052.205l1.87-.467a1 1 0 0 1 1.233.84L19 7v1.81a6.517 6.517 0 0 1 1.364 1.882l.138.308H21a1 1 0 0 1 .993.883L22 12v3a1 1 0 0 1-.445.832l-.108.062l-1.168.585a6.525 6.525 0 0 1-2.02 2.325l-.259.174V20a1 1 0 0 1-.883.993L17 21h-3a1 1 0 0 1-.993-.883L13 20h-1a1 1 0 0 1-.883.993L11 21H8a1 1 0 0 1-.993-.883L7 20v-1.022a6.508 6.508 0 0 1-2.854-4.101a3.002 3.002 0 0 1-2.14-2.693L2 12v-.5a1 1 0 0 1 1.993-.117L4 11.5v.5c0 .148.032.289.09.415a6.504 6.504 0 0 1 2.938-4.411A4.5 4.5 0 0 1 11.5 3M17 8.28l-2.758.69l-.12.023L14 9h-3.5a4.5 4.5 0 0 0-2.045 8.51a1 1 0 0 1 .537.766L9 18.4v.6h1a1 1 0 0 1 .883-.993L11 18h3a1 1 0 0 1 .993.883L15 19h1v-.6a1 1 0 0 1 .545-.89a4.523 4.523 0 0 0 2.068-2.18a.999.999 0 0 1 .347-.417l.119-.07l.921-.461V13h-.207a1 1 0 0 1-.962-.728a4.504 4.504 0 0 0-1.468-2.244a1 1 0 0 1-.355-.644L17 9.257zM16 11a1 1 0 1 1 0 2a1 1 0 0 1 0-2m-4.5-6a2.5 2.5 0 0 0-2.478 2.169A6.52 6.52 0 0 1 10.5 7h3.377l.07-.017A2.5 2.5 0 0 0 11.5 5" />
+                        </g>
+                      </svg></i></span>
+                </div>
+                <div class="service-content">
+                  <h2 class="s-title">Gestion de budget</h2>
+                  <p class="s-description text-center">
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni adipisci eaque autem fugiat! Quia,
+                    provident vitae! Magni
+                    tempora perferendis eum non provident.
+                  </p>
+                </div>
+              </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
   </main><!-- End #main -->
 
